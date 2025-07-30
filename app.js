@@ -32,17 +32,3 @@ const gigs = [{
         date: "2025-10-12",
         location: "Central Park, New York"
       }];
-
-app.get("/gigs", (req, res) => {
-  res.send(gigs);
-});
-
-app.get("/gigs/:id", (req, res) => {
-  paramId = req.params.id;
-  let gig = gigs.filter((item) => {
-    return item.id == paramId;
-  });
-console.log("gig", gig);
-  res.send(gig);
-});
-
