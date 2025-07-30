@@ -32,3 +32,8 @@ const gigs = [{
         date: "2025-10-12",
         location: "Central Park, New York"
       }];
+
+
+app.get("/gigs", (req,res) => {
+  res.send(gigs);
+});
